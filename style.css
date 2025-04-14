@@ -1,0 +1,53 @@
+body {
+    background-color: 98a0a5;
+}
+
+a {
+    text-decoration: none;    
+    color:white;
+    display: block;
+}
+
+form {
+    margin : 0px;
+}
+
+input {
+    margin : 0px;
+    width: 50px;
+    height: 30px;
+}
+
+button {
+    margin : 0px;
+    width: 50px;
+    height: 30px;
+}
+
+
+
+.flex-container{
+    display: flex;
+}
+
+.flex-container.column{
+    flex-direction: column;
+}
+
+
+.flex-item {
+    display: inline-flex;
+    flex-direction: column;
+}
+
+.flex-item.row {
+    flex-direction: row;
+}
+
+.link-item {
+    margin-right: 5px;
+}
+
+.party-name {
+    text-align: center;
+}
