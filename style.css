@@ -14,13 +14,13 @@ form {
 
 input {
     margin : 0px;
-    width: 50px;
+    width: 76px;
     height: 30px;
 }
 
 button {
     margin : 0px;
-    width: 50px;
+    width: 70px;
     height: 30px;
 }
 
@@ -50,4 +50,11 @@ button {
 
 .party-name {
     text-align: center;
+}
+
+.party {
+    background-color: coral;
+}
+.reset {
+    background-color: aqua;
 }

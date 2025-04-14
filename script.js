@@ -21,6 +21,14 @@ function quest(no, status) {
 	window.open(link, 'quest');
 }
 
+function reset_pattern() {
+	let cnt = 0;
+	for(key in 캐릭) {
+		let char = key
+		setTimeout(() => {pattern(char, 0)}, cnt++ * 1000)
+	}
+}
+
 function pattern(formId, patternno){
 	const form = document.getElementById(formId);
 	form.querySelector('input[name="patternno"]').value = patternno;
@@ -60,6 +68,7 @@ function battle(status, action, char) {
 	form.appendChild(input);
 	document.body.appendChild(form);
 	form.submit();
+	document.body.removeChild(form);
 }
 
 function 범용모험() {
