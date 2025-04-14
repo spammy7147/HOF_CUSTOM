@@ -1,0 +1,53 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title> 단축키 페이지 </title>
+<link rel="stylesheet" href="./style.css" type="text/css">
+<script type="text/javascript" src="./const.js"></script>
+<script type="text/javascript" src="./script.js"></script>
+</head>
+<body>
+
+<div class="flex-container column">
+  <div class="flex-item row">
+    <a href="#" onclick="do_quest()" class="link-item">퀘스트</a>
+    <a href="http://sic.zerosic.com/ZeroHOF/index.php?menu=auction"  class="link-item">옥션</a>
+  </div>
+ 
+</div>
+
+<hr>
+
+<div id="character-list"></div>
+
+<hr>
+
+<div class="flex-container">
+  <div class="flex-item">
+    <button onclick="party_pattern('소셜', 0, '사제', 0, '도둑', 0, '드루', 0, '바드', 0);">범용</button>
+    <button onclick="battle('전투', 'snow22', ['소셜','사제','도둑','드루','바드']);">발자키</button>
+    <button onclick="범용모험();">전투</button>
+  </div>
+
+  <div class="flex-item">
+    <button onclick="party_pattern('도둑', 2, '스펠마', 5, '솬서', 6, '사제2', 2, '와쳐', 4);">동관</button>
+    <button onclick="battle('모험', 'Noble103', ['도둑','스펠마','솬서','사제2','와쳐']);">동관</button>
+  </div>
+</div>
+
+<hr>
+
+<div class="flex-container">
+  <div class="flex-item">
+    <button onclick="party_pattern('소셜', 0, '사제', 0, '도둑', 0, '드루', 0, '바드', 0);">범용</button>
+    <button onclick="battle('모험', 'Noble103', ['도둑','스펠마','솬서','사제2','와쳐']);">동관</button>
+  </div>
+</div>
+
+<hr>
+
+
+</body>
+
+
+</html>
