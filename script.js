@@ -17,7 +17,7 @@ function clickSelectedBattles(arr) {
 
   // 순차적으로 누르기 위해 간단한 딜레이 추가
   buttons.forEach((btn, index) => {
-    setTimeout(() => {btn.click()}, index * 1500)
+    setTimeout(() => {btn.click()}, index * 2000)
   });
 }
 
