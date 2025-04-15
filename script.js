@@ -17,7 +17,7 @@ function clickSelectedBattles(arr) {
 
   // 순차적으로 누르기 위해 간단한 딜레이 추가
   buttons.forEach((btn, index) => {
-    setTimeout(() => {btn.click()}, index * 2000)
+    setTimeout(() => {btn.click()}, index * 4000)
   });
 }
 
@@ -53,7 +53,7 @@ function party_pattern(class1, pattern1, class2, pattern2, class3, pattern3, cla
 	setTimeout(() => {pattern(class5, pattern5)}, 4000)
 }
 
-function battle(status, action, char) { 
+function battle(status, action, char, isMulti) { 
 	if(status === '모험') {
 		action = 'http://sic.zerosic.com/ZeroHOF/index.php?sp_common=' + action
 	}else {
@@ -73,7 +73,7 @@ function battle(status, action, char) {
 	}
 	const input = document.createElement('input');
 	input.type = 'hidden';
-	input.name = status === '모험' ? 'monster_battle' : 'monster_battle_10';
+	input.name = isMulti ? 'monster_battle_10' : 'monster_battle';
 	input.value = 'Battle !'
 	form.appendChild(input);
 	document.body.appendChild(form);
@@ -85,7 +85,7 @@ function 범용모험() {
 	let idx = 0;
 	for(key in 모험) {
 		let action = 모험[key] 
-		setTimeout(() => {battle('모험', action,['소셜','사제','바드','드루','도둑'])}, idx++ * 1000)
+		setTimeout(() => {battle('모험', action,['소셜','사제','바드','드루','도둑'], false)}, idx++ * 1000)
 	}
 
 }
