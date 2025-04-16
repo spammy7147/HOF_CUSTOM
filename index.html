@@ -24,7 +24,9 @@
 
 <div class="flex-container">
   <div class="flex-item">
-    <button class="party" onclick="party_pattern('소셜', 0, '사제', 0, '도둑', 0, '드루', 0, '바드', 0)">범용</button>
+    <button class="party" 
+      onclick="party_pattern(['소셜', 0], ['사제', 0], ['도둑', 0], ['드루', 0], ['바드', 0], ['잉퀴', 0], ['에인', 0])">
+      범용</button>
     <button onclick="범용모험();">전투</button>
     <button class="battle" onclick="battle('전투', 'snow22', ['소셜','사제','도둑','드루','바드'])">발자키</button>
     <button class="battle" onclick="battle('전투', 'snow23', ['소셜','사제','바드','잉퀴','에인'], true)">발자</button>
