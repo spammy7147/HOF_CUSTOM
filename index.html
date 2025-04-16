@@ -30,20 +30,20 @@
     <button class="battle" onclick="battle('전투', 'snow23', ['소셜','사제','바드','잉퀴','에인'], true)">발자</button>
   </div>
   <div class="flex-item"> 
-    <button class="party" onclick="party_pattern('소셜', 0, '사제', 0, '바드', 0, '에인', 0, '동방', 0)">동관</button>
+    <button class="party" onclick="party_pattern(['소셜', 0], ['사제', 0], ['바드', 0], ['에인', 0], ['동방', 0])">동관</button>
     <button class="battle" onclick="battle('전투', 'Noble102', ['소셜','사제','바드','에인','동방'],true)">동관</button>
     
-    <button class="party" onclick="party_pattern('카발', 0, '사제2', 0, '낫망네크', 0, '에인', 0, '동방', 0)">키퀘</button>
-    <button class="battle" onclick="battle('전투', 'Noble102', ['소셜','사제','바드','에인','동방'],true)">키퀘</button>
-    <button class="party" onclick="party_pattern('사제', 0, '솬서', 0, '바드', 0, '드루', 0, '닌자', 0)">해달</button>
+    <button class="party" onclick="party_pattern(['카발', 2], ['사제2', 3], ['낫망네크', 3(])">키퀘</button>
+    <button class="battle" onclick="battle('전투', 'Noble102', ['카발','사제2','낫망네크'],true)">키퀘</button>
+    <button class="party" onclick="party_pattern(['사제', 0], ['솬서', 0], ['바드', 0], ['드루', 0], ['닌자', 0])">해달</button>
     <button class="battle" onclick="battle('전투', 'Noble102', ['사제','솬서','바드','드루','닌자'],true)">해달</button>
   </div>
   <div class="flex-item"> 
-    <button class="party" onclick="party_pattern('사제', 0, '사제2', 0, '드루', 0, '솬서', 0, '닌자', 0)">해달</button>
+    <button class="party" onclick="party_pattern(['사제', 0], ['사제2', 0], ['드루', 0], ['솬서', 0], ['닌자', 0])">해달</button>
     <button class="battle" onclick="battle('전투', 'Noble203', ['사제','사제2','드루','솬서','닌자'],false)">해달</button>
   </div>
   <div class="flex-item"> 
-    <button class="party" onclick="party_pattern('사제', 0, '드루', 0, '암흑네크', 3, '동방', 0, '바드', 0)">유적</button>
+    <button class="party" onclick="party_pattern(['사제', 0], ['드루', 0], ['암흑네크', 3], ['동방', 0], ['바드', 0])">유적</button>
     <button class="battle" onclick="clickSelectedBattles(['1층','2층','3층','4층','5층'])">유적</button>
     
     <button class="battle" onclick="battle('모험', 'acruin01', ['사제','드루','암흑네크','동방','바드'], false)">1층</button>
@@ -58,38 +58,38 @@
 
 <div class="flex-container">
   <div class="flex-item">
-    <button class="party" onclick="party_pattern('도둑', 2, '스펠마', 5, '솬서', 6, '사제2', 2, '와쳐', 4)">카스파</button>
+    <button class="party" onclick="party_pattern(['도둑', 2], ['스펠마', 5], ['솬서', 6], ['사제2', 2], ['와쳐', 4])">카스파</button>
     <button class="battle" onclick="battle('모험', 'Noble103', ['도둑','스펠마','솬서','사제2','와쳐'], false)">카스파</button>
   </div>
   <div class="flex-item">
-    <button class="party" onclick="party_pattern('에인', 1, '사제', 3, '도둑', 1, '솬서', 2, '카발', 1)">중마</button>
+    <button class="party" onclick="party_pattern(['에인', 1], ['사제', 3], ['도둑', 1], ['솬서', 2], ['카발', 1])">중마</button>
     <button class="battle" onclick="battle('모험', 'sion07', ['에인','사제','도둑','솬서','카발'], false)">중마</button>
   </div>  
   <div class="flex-item">
-    <button class="party" onclick="party_pattern('소셜', 3, '사제', 1, '바드', 1, '스펠마', 1, '칠터치네크', 0)">1탑</button>  
+    <button class="party" onclick="party_pattern(['소셜', 3], ['사제', 1], ['바드', 1], ['스펠마', 1], '[칠터치네크', 0])">1탑</button>  
     <button class="battle" onclick="battle('모험', 'Rsion03', ['소셜','사제','바드','스펠마','칠터치네크'], false)">1탑</button>
     <button class="battle" onclick="battle('모험', 'sion03', ['소셜','사제','바드','스펠마','칠터치네크'], false)">1탑</button>
   </div>
   <div class="flex-item">
-    <button class="party" onclick="party_pattern('소셜', 4, '사제', 0, '2탑전용', 0, '스펠마', 2, '도둑', 0)">2탑</button>
+    <button class="party" onclick="party_pattern(['소셜', 4], ['사제', 0], ['2탑전용', 0], ['스펠마', 2], ['도둑', 0])">2탑</button>
     <button class="battle" onclick="battle('모험', 'Rsion04', ['소셜','사제','2탑전용','스펠마','도둑'], false)">2탑</button>
     <button class="battle" onclick="battle('모험', 'sion04', ['소셜','사제','2탑전용','스펠마','도둑'], false)">2탑</button>
   </div>
     <div class="flex-item">
-    <button class="party" onclick="party_pattern('총잡이', 3, '드루', 3, '화악', 0, '솬서', 1, '도둑', 0)">3탑</button>
+    <button class="party" onclick="party_pattern(['총잡이', 3], ['드루', 3], ['화악', 0], ['솬서', 1], ['도둑', 0])">3탑</button>
     <button class="battle" onclick="battle('모험', 'Rsion05', ['총잡이','드루','화악','솬서','도둑'], false)">3탑</button>
     <button class="battle" onclick="battle('모험', 'sion05', ['총잡이','드루','화악','솬서','도둑'], false)">3탑</button>
   </div>
   <div class="flex-item">
-    <button class="party" onclick="party_pattern('사제', 5, '동방', 3, '드루', 4, '와쳐', 5, '책사', 0)">놀이방</button>
+    <button class="party" onclick="party_pattern(['사제', 5], ['동방', 3], ['드루', 4], ['와쳐', 5], ['책사', 0])">놀이방</button>
     <button class="battle" onclick="battle('모험', 'Noble205', ['사제','동방','드루','와쳐','책사'], false)">놀이방</button>
   </div>
   <div class="flex-item">
-    <button class="party" onclick="party_pattern('동방', 2, '사제2', 0, '몽크', 1, '와쳐', 1, '바드2', 0)">결승</button>
+    <button class="party" onclick="party_pattern(['동방', 2], ['사제2', 0], ['몽크', 1], ['와쳐', 1], ['바드2', 0])">결승</button>
     <button class="battle" onclick="battle('모험', 'festival08', ['동방','사제2','몽크','와쳐','바드2'])">결승</button>
   </div>
   <div class="flex-item">
-    <button class="party" onclick="party_pattern('사제2', 4, '지오', 3, '스펠마', 4, '해디', 0, '칠터치네크', 2)">문어</button>
+    <button class="party" onclick="party_pattern(['사제2', 4], ['지오', 3], ['스펠마', 4], ['해디', 0], ['칠터치네크', 2])">문어</button>
     <button class="battle" onclick="battle('모험', 'Fish01ex', ['사제2','지오','스펠마','해디','칠터치네크'], false)">문어</button>
   </div>
 <!-- 놀이왕	사제, 동방, 도루, 와쳐, 책사
