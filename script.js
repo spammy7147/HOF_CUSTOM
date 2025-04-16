@@ -45,12 +45,13 @@ function pattern(formId, patternno){
 	form.submit();
 }
 
-function party_pattern(class1, pattern1, class2, pattern2, class3, pattern3, class4, pattern4, class5, pattern5) {
-	setTimeout(() => {pattern(class1, pattern1)}, 0)
-	setTimeout(() => {pattern(class2, pattern2)}, 1000)
-	setTimeout(() => {pattern(class3, pattern3)}, 2000)
-	setTimeout(() => {pattern(class4, pattern4)}, 3000)
-	setTimeout(() => {pattern(class5, pattern5)}, 4000)
+
+function party_pattern(...args) {
+  args.forEach(([className, patternName], index) => {
+    setTimeout(() => {
+      pattern(className, patternName);
+    }, index * 1000);
+  });
 }
 
 function battle(status, action, char, isMulti) { 
