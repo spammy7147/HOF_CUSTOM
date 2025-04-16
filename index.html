@@ -24,37 +24,48 @@
 
 <div class="flex-container">
   <div class="flex-item">
-    <button class="party" 
-      onclick="party_pattern(['소셜', 0], ['사제', 0], ['도둑', 0], ['드루', 0], ['바드', 0], ['잉퀴', 0], ['에인', 0])">
-      범용</button>
+    <button class="party" onclick="party_pattern(['소셜', 0], ['사제', 0], ['도둑', 0], ['드루', 0], ['바드', 0], ['잉퀴', 0], ['에인', 0])">범용</button>
     <button onclick="범용모험();">전투</button>
-    <button class="battle" onclick="battle('전투', 'snow22', ['소셜','사제','도둑','드루','바드'])">발자키</button>
+    <button class="battle" onclick="battle('전투', 'snow22', ['소셜','사제','도둑','드루','바드'], true)">발자키</button>
     <button class="battle" onclick="battle('전투', 'snow23', ['소셜','사제','바드','잉퀴','에인'], true)">발자</button>
-    <button class="battle" onclick="battle('모험', 'DAYM0004', ['소셜','사제','바드','잉퀴','에인'], false)">수요</button>
+    <button class="battle" onclick="battle('전투', 'snow23', ['소셜','사제','바드','잉퀴','에인'], true)">발자</button>
+    <button class="battle" onclick="battle('전투', 'snow23', ['소셜','사제','바드','잉퀴','에인'], true)">발자</button>
+  </div>
+  <div class="flex-item"> 
+    <button class="battle" onclick="battle('모험', 'DAYM0004', ['소셜','사제','바드','잉퀴','에인'], false)">수욜</button>
+    <button class="battle" onclick="battle('모험', 'DAYM0005', ['소셜','사제','바드','잉퀴','에인'], false)">목욜</button>
+    <button class="battle" onclick="battle('모험', 'DAYM0006', ['소셜','사제','바드','잉퀴','에인'], false)">금욜</button>
+    <button class="battle" onclick="battle('모험', 'DAYM0007', ['소셜','사제','바드','잉퀴','에인'], false)">주말</button>
   </div>
   <div class="flex-item"> 
     <button class="party" onclick="party_pattern(['소셜', 0], ['사제', 0], ['바드', 0], ['에인', 0], ['동방', 0])">동관</button>
     <button class="battle" onclick="battle('전투', 'Noble102', ['소셜','사제','바드','에인','동방'],true)">동관</button>
-    
     <button class="party" onclick="party_pattern(['카발', 2], ['사제2', 3], ['낫망네크', 3])">키퀘</button>
     <button class="battle" onclick="battle('전투', 'Noble201', ['카발','사제2','낫망네크'],true)">키퀘</button>
   </div>
   <div class="flex-item"> 
-    <button class="party" onclick="party_pattern(['소셜', 0], ['사제', 0], ['바드', 0], ['동방', 0], ['지오', 0])">천년</button>
-    <button class="battle" onclick="battle('모험', 'festival01', ['소셜','사제','바드','동방','지오'],false)">천년</button>
+    <button class="party" onclick="party_pattern(['소셜', 0], ['사제', 0], ['바드', 0], ['동방', 0], ['지오', 0])">천년제</button>
+    <button class="chain" onclick="clickSelectedBattles(['천년일반','천년하드','검방','혈족','모레','산중','신비','천년하드'])">천년연속</button>
+    <button class="battle" onclick="battle('모험', 'festival01', ['소셜','사제','바드','동방','지오'],false)">천년일반</button>
+    <button class="battle" onclick="battle('모험', 'festival011', ['소셜','사제','바드','동방','지오'],false)">천년하드</button>
     <button class="battle" onclick="battle('모험', 'festival02', ['소셜','사제','바드','동방','지오'],false)">검방</button>
     <button class="battle" onclick="battle('모험', 'festival03', ['소셜','사제','바드','동방','지오'],false)">혈족</button>
     <button class="battle" onclick="battle('모험', 'festival05', ['소셜','사제','바드','동방','지오'],false)">모레</button>
     <button class="battle" onclick="battle('모험', 'festival06', ['소셜','사제','바드','동방','지오'],false)">산중</button>
     <button class="battle" onclick="battle('모험', 'festival07', ['소셜','사제','바드','동방','지오'],false)">신비</button>
-	 </div>
-	 <div class="flex-item">
-    <button class="battle" onclick="battle('모험', 'festival011', ['소셜','사제','바드','동방','지오'],false)">천년</button>
-    <button class="battle" onclick="battle('모험', 'festival022', ['소셜','사제','바드','동방','지오'],false)">검방</button>
-    <button class="battle" onclick="battle('모험', 'festival033', ['소셜','사제','바드','동방','지오'],false)">혈족</button>
-    <button class="battle" onclick="battle('모험', 'festival055', ['소셜','사제','바드','동방','지오'],false)">모레</button>
-    <button class="battle" onclick="battle('모험', 'festival066', ['소셜','사제','바드','동방','지오'],false)">산중</button>
-    <button class="battle" onclick="battle('모험', 'festival077', ['소셜','사제','바드','동방','지오'],false)">신비</button>
+	</div>
+  <div class="flex-item"> 
+    <button class="party" onclick="party_pattern(['낫망네크', 0], ['바드2', 4])">낫망</button>
+    <button class="chain" onclick="clickSelectedBattles(['낫망','낫망하드'])">낫망연속</button>
+    <button class="battle" onclick="battle('모험', 'festival04', ['낫망네크','바드2'],false)">낫망</button>
+    <button class="battle" onclick="battle('모험', 'festival044', ['낫망네크','바드2'],false)">낫망하드</button>
+  </div>
+	<div class="flex-item">
+    <button class="battle" onclick="battle('모험', 'festival022', ['소셜','사제','바드','동방','지오'],false)">검방하드</button>
+    <button class="battle" onclick="battle('모험', 'festival033', ['소셜','사제','바드','동방','지오'],false)">혈족하드</button>
+    <button class="battle" onclick="battle('모험', 'festival055', ['소셜','사제','바드','동방','지오'],false)">모레하드</button>
+    <button class="battle" onclick="battle('모험', 'festival066', ['소셜','사제','바드','동방','지오'],false)">산중하드</button>
+    <button class="battle" onclick="battle('모험', 'festival077', ['소셜','사제','바드','동방','지오'],false)">신비하드</button>
   </div>
     <div class="flex-item"> 
     <button class="party" onclick="party_pattern(['사제', 0], ['사제2', 0], ['드루', 0], ['솬서', 0], ['닌자', 0])">해달</button>
@@ -62,7 +73,7 @@
   </div>
   <div class="flex-item"> 
     <button class="party" onclick="party_pattern(['사제', 0], ['드루', 0], ['암흑네크', 3], ['동방', 0], ['바드', 0])">유적</button>
-    <button class="battle" onclick="clickSelectedBattles(['1층','2층','3층','4층','5층'])">유적</button>
+    <button class="chain" onclick="clickSelectedBattles(['1층','2층','3층','4층','5층'])">유적</button>
     
     <button class="battle" onclick="battle('모험', 'acruin01', ['사제','드루','암흑네크','동방','바드'], false)">1층</button>
     <button class="battle" onclick="battle('모험', 'acruin02', ['사제','드루','암흑네크','동방','바드'], false)">2층</button>
@@ -80,9 +91,17 @@
     <button class="battle" onclick="battle('모험', 'Noble103', ['도둑','스펠마','솬서','사제2','와쳐'], false)">카스파</button>
   </div>
   <div class="flex-item">
+    <button class="party" onclick="party_pattern(['사제', 5], ['동방', 3], ['드루', 4], ['와쳐', 5], ['책사', 0])">놀이방</button>
+    <button class="battle" onclick="battle('모험', 'Noble205', ['사제','동방','드루','와쳐','책사'], false)">놀이방</button>
+  </div>
+  <div class="flex-item">
     <button class="party" onclick="party_pattern(['에인', 1], ['사제', 3], ['도둑', 1], ['솬서', 2], ['카발', 1])">중마</button>
     <button class="battle" onclick="battle('모험', 'sion07', ['에인','사제','도둑','솬서','카발'], false)">중마</button>
   </div>  
+  <div class="flex-item">
+    <button class="party" onclick="party_pattern(['동방', 2], ['사제2', 0], ['몽크', 1], ['와쳐', 1], ['바드2', 0])">결승</button>
+    <button class="battle" onclick="battle('모험', 'festival08', ['동방','사제2','몽크','와쳐','바드2'])">결승</button>
+  </div>
   <div class="flex-item">
     <button class="party" onclick="party_pattern(['소셜', 3], ['사제', 1], ['바드', 1], ['스펠마', 1], ['칠터치네크', 0])">1탑</button>  
     <button class="battle" onclick="battle('모험', 'Rsion03', ['소셜','사제','바드','스펠마','칠터치네크'], false)">1탑</button>
@@ -99,12 +118,9 @@
     <button class="battle" onclick="battle('모험', 'sion05', ['총잡이','드루','화악','솬서','도둑'], false)">3탑</button>
   </div>
   <div class="flex-item">
-    <button class="party" onclick="party_pattern(['사제', 5], ['동방', 3], ['드루', 4], ['와쳐', 5], ['책사', 0])">놀이방</button>
-    <button class="battle" onclick="battle('모험', 'Noble205', ['사제','동방','드루','와쳐','책사'], false)">놀이방</button>
-  </div>
-  <div class="flex-item">
-    <button class="party" onclick="party_pattern(['동방', 2], ['사제2', 0], ['몽크', 1], ['와쳐', 1], ['바드2', 0])">결승</button>
-    <button class="battle" onclick="battle('모험', 'festival08', ['동방','사제2','몽크','와쳐','바드2'])">결승</button>
+    <button class="party" onclick="party_pattern(['총잡이', 3], ['드루', 3], ['화악', 0], ['솬서', 1], ['도둑', 0])">4탑</button>
+    <button class="battle" onclick="battle('모험', 'Rsion05', ['총잡이','드루','화악','솬서','도둑'], false)">4탑</button>
+    <button class="battle" onclick="battle('모험', 'sion05', ['총잡이','드루','화악','솬서','도둑'], false)">4탑</button>
   </div>
   <div class="flex-item">
     <button class="party" onclick="party_pattern(['사제2', 4], ['지오', 3], ['스펠마', 4], ['해디', 0], ['칠터치네크', 2])">문어</button>

@@ -54,7 +54,12 @@ button {
 
 .party {
     background-color: coral;
+    margin-top: 5px;
 }
 .reset {
     background-color: aqua;
+}
+
+.chain {
+    background-color: dimgray;
 }
