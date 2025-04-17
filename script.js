@@ -15,10 +15,10 @@ function clickSelectedBattles(arr) {
   const buttons = Array.from(document.querySelectorAll('button.battle'))
     .filter(btn => arr.includes(btn.textContent.trim()));
 
-  // 순차적으로 누르기 위해 간단한 딜레이 추가
-  buttons.forEach((btn, index) => {
-    setTimeout(() => {btn.click()}, index * 4000)
-  });
+  for(key in buttons) {
+			let btn = buttons[key];
+	   setTimeout(() => {btn.click()}, index * 4000)		
+		}
 }
 
 function quest(no, status) {
