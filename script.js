@@ -17,7 +17,7 @@ function clickSelectedBattles(arr) {
 
   for(key in buttons) {
 			let btn = buttons[key];
-	   setTimeout(() => {btn.click()}, index * 4000)		
+	   setTimeout(() => {btn.click()}, key * 4000)		
 		}
 }
 
