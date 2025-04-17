@@ -86,7 +86,7 @@ function 범용모험() {
 	let idx = 0;
 	for(key in 모험) {
 		let action = 모험[key] 
-		setTimeout(() => {battle('모험', action,['소셜','사제','바드','드루','도둑'], false)}, idx++ * 1500)
+		setTimeout(() => {battle('모험', action,['소셜','사제','바드','에인','도둑'], false)}, idx++ * 1500)
 	}
 
 }
