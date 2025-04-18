@@ -11,13 +11,13 @@ function do_quest() {
 	}
 }
 
-function clickSelectedBattles(arr) {
+function clickSelectedBattles(arr, sec=4) {
   const buttons = Array.from(document.querySelectorAll('button.battle'))
     .filter(btn => arr.includes(btn.textContent.trim()));
 
   for(key in buttons) {
 			let btn = buttons[key];
-	   setTimeout(() => {btn.click()}, key * 4000)		
+	   setTimeout(() => {btn.click()}, key * sec * 1000)		
 		}
 }
 
