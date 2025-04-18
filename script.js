@@ -1,12 +1,12 @@
-function do_quest() {
+function do_quest(arr) {
 	let cnt = 0;
-	for(key in 퀘스트) {
-		let no = 퀘스트[key];
+	for(key in arr) {
+		let no = arr[key];
 		setTimeout(() => {quest(no, 'get')}, cnt++ * 1000)
 	}
 
-	for(key in 퀘스트) {
-		let no = 퀘스트[key];
+	for(key in arr) {
+		let no = arr[key];
 		setTimeout(() => {quest(no, 'complete')}, cnt++ * 1000)
 	}
 }

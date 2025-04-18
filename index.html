@@ -10,7 +10,9 @@
 
 <div class="flex-container column">
   <div class="flex-item row">
-    <a href="#" onclick="do_quest()" class="link-item">퀘스트</a>
+    <a href="#" onclick="do_quest(일퀘)" class="link-item">일퀘</a>
+    <a href="#" onclick="do_quest(열쇠)" class="link-item">열쇠</a>
+    <a href="#" onclick="do_quest(천공섬)" class="link-item">천공섬</a>
     <a href="http://sic.zerosic.com/ZeroHOF/index.php?menu=auction"  class="link-item">옥션</a>
   </div>
  
@@ -24,18 +26,20 @@
 
 <div class="flex-container">
   <div class="flex-item">
-    <button class="party" onclick="party_pattern(['소셜', 0], ['사제', 0], ['도둑', 0], ['드루', 0], ['바드', 0], ['잉퀴', 0], ['에인', 0])">범용</button>
+    <button class="party" onclick="party_pattern(['소셜', 0], ['사제', 0], ['도둑', 0], ['드루', 0], ['바드', 0], ['잉퀴', 0], ['에인', 0], ['총잡이', 0], ['동방', 0])">범용</button>
     <button onclick="범용모험();">전투</button>
     <button class="battle" onclick="battle('전투', 'snow22', ['소셜','사제','도둑','드루','바드'], true)">발자키</button>
-    <button class="battle" onclick="battle('전투', 'snow23', ['소셜','사제','바드','잉퀴','에인'], true)">발자</button>
-    <button class="battle" onclick="battle('전투', 'snow23', ['소셜','사제','바드','잉퀴','에인'], true)">발자</button>
-    <button class="battle" onclick="battle('전투', 'snow23', ['소셜','사제','바드','잉퀴','에인'], true)">발자</button>
+    <button class="battle" onclick="battle('전투', 'snow23', ['소셜','사제','동방','총잡이','에인'], true)">발자</button>
   </div>
   <div class="flex-item"> 
+    <button class="battle" onclick="battle('모험', 'DAYM0002', ['소셜','사제','바드','잉퀴','에인'], false)">월욜</button>
+    <button class="battle" onclick="battle('모험', 'DAYM0003', ['소셜','사제','바드','잉퀴','에인'], false)">화욜</button>
     <button class="battle" onclick="battle('모험', 'DAYM0004', ['소셜','사제','바드','잉퀴','에인'], false)">수욜</button>
     <button class="battle" onclick="battle('모험', 'DAYM0005', ['소셜','사제','바드','잉퀴','에인'], false)">목욜</button>
     <button class="battle" onclick="battle('모험', 'DAYM0006', ['소셜','사제','바드','잉퀴','에인'], false)">금욜</button>
-    <button class="battle" onclick="battle('모험', 'DAYM0007', ['소셜','사제','바드','잉퀴','에인'], false)">주말</button>
+    <button class="battle" onclick="battle('모험', 'DAYM0001', ['소셜','사제','바드','잉퀴','에인'], false)">주말</button>
+    <button class="battle" onclick="battle('모험', 'DAYM0050', ['소셜','사제','바드','잉퀴','에인'], false)">도서관</button>
+    
   </div>
   <div class="flex-item"> 
     <button class="party" onclick="party_pattern(['소셜', 0], ['사제', 0], ['바드', 0], ['에인', 0], ['동방', 0])">동관</button>
@@ -44,6 +48,8 @@
     <button class="battle" onclick="battle('전투', 'Noble201', ['카발','사제2','낫망네크'],true)">키퀘</button>
     <button class="party" onclick="party_pattern(['소셜2', 0], ['사제', 0], ['바드', 0],['에인', 0],['잉퀴', 0])">호루스</button>
     <button class="battle" onclick="battle('모험', 'Pyra66', ['소셜2','사제','바드','에인','잉퀴'],false)">호루스</button>
+    <button class="party" onclick="party_pattern(['소셜', 0], ['사제', 0], ['솬사', 0],['에인', 0],['잉퀴', 0])">로호트</button>
+    <button class="battle" onclick="battle('모험', 'Noble033', ['소셜','사제','솬사','에인','잉퀴'],false)">로호트</button>
   </div>
   <div class="flex-item"> 
     <button class="party" onclick="party_pattern(['소셜', 0], ['사제', 0], ['바드', 0], ['동방', 0], ['지오', 0])">천년제</button>
