@@ -6,7 +6,7 @@ const 모험 = {
     '천체관' : 'mg04',
     '태양의 제단' : 'Pyra55',
     '천년제' : 'festival01',
-    '천년제 하드' : 'festival01'
+    '천년제 하드' : 'festival011'
 }
 
 const 퀘스트 = {
