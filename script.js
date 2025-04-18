@@ -11,7 +11,7 @@ function do_quest() {
 	}
 }
 
-function clickSelectedBattles(arr, sec=4) {
+function clickSelectedBattles(arr, sec=1) {
   const buttons = Array.from(document.querySelectorAll('button.battle'))
     .filter(btn => arr.includes(btn.textContent.trim()));
 
