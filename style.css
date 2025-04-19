@@ -24,6 +24,9 @@ button {
     height: 30px;
 }
 
+hr {
+    margin: 10px;
+}
 
 
 .flex-container{

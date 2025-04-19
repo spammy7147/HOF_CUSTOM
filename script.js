@@ -1,28 +1,31 @@
-function do_quest(arr) {
+function get_quest(arr, menu = '퀘스트') {
+	
 	let cnt = 0;
 	for(key in arr) {
 		let no = arr[key];
-		setTimeout(() => {quest(no, 'get')}, cnt++ * 1000)
+		setTimeout(() => {quest(no, 'get', menu)}, cnt++ * 1000)
 	}
+}
 
+function complete_quest(arr, menu = '퀘스트') {
+	let cnt = 0;
 	for(key in arr) {
 		let no = arr[key];
-		setTimeout(() => {quest(no, 'complete')}, cnt++ * 1000)
+		setTimeout(() => {quest(no, 'complete',menu)}, cnt++ * 1000)
 	}
 }
-
-function clickSelectedBattles(arr, sec=1) {
-  const buttons = Array.from(document.querySelectorAll('button.battle'))
-    .filter(btn => arr.includes(btn.textContent.trim()));
-
-  for(key in buttons) {
-			let btn = buttons[key];
-	   setTimeout(() => {btn.click()}, key * sec * 1000)		
-		}
-}
-
-function quest(no, status) {
+function quest(no, status, menu) {
 	let link;
+	if(menu === '작업장') {
+		if(status === 'get') { 
+			link = 'http://sic.zerosic.com/ZeroHOF/index.php?menu=quest2&action=get&no=' + no;
+		} else {
+			link = 'http://sic.zerosic.com/ZeroHOF/index.php?menu=quest2&action=complete&no=' + no;
+		}
+		window.open(link, 'quest');
+		return;
+	}
+
 	if(status === 'get') { 
 		link = 'http://sic.zerosic.com/ZeroHOF/index.php?menu=quest&action=get&no=' + no;
 	} else {
@@ -30,6 +33,16 @@ function quest(no, status) {
 	}
 	window.open(link, 'quest');
 }
+
+function clickSelectedBattles(arr, sec=1) {
+	const buttons = Array.from(document.querySelectorAll('button.battle'))
+	  .filter(btn => arr.includes(btn.textContent.trim()));
+  
+	for(key in buttons) {
+			  let btn = buttons[key];
+		 setTimeout(() => {btn.click()}, key * sec * 1000)		
+		  }
+  }
 
 function reset_pattern() {
 	let cnt = 0;
@@ -102,28 +115,29 @@ async function replaceFragment(htmlName) {
     target.replaceWith(fragmentElement);
   }
 
-function equip(a,b,c){
-	var form = a
-	var input = document.createElement('input')
-	input.type ='hidden'
-	input.name = b
-	form.target = 'lucky'
-	input.value ='Equip Load(1)';
-	form.appendChild(input);
-	form.submit() ;
-	form.removeChild(input);
-}
+function hideWeek() {
+	const dayMap = {
+		0: 'weekend', 
+		6: 'weekend',   
+		1: 'monday',
+		2: 'tuesday',     
+		3: 'wednesday',
+		4: 'thursday',
+		5: 'friday',
+	  };
+	const today = dayMap[new Date().getDay()];
+	console.log(document.querySelectorAll('button.week'))
+	Array.from(document.querySelectorAll('button.battle.week'))
+	.forEach(button => {
+		debugger;
+		console.log(button.classList)
+		if (button.classList.contains(today)) {
+		  button.style.display = 'block'; // 또는 'block' 원하면 조정
+		} else {
+		  button.style.display = 'none';
+		}
+	})
+  }
 
-
-
-function u_equip_5(a,b,c,d,e,f,g,h,i,j ) {
-	setTimeout(equip,0,a,b,2);
-	setTimeout(equip,1000,c,d,3);
-	setTimeout(equip,2000,e,f,4);
-	setTimeout(equip,3000,g,h,5);
-	setTimeout(equip,4000,i,j,6);
-}
-
-
-
+  hideWeek()
 replaceFragment('character-list');
