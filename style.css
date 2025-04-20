@@ -66,3 +66,14 @@ hr {
 .chain {
     background-color: dimgray;
 }
+
+.timer {
+    text-align: center;
+}
+
+.timerbox {
+    text-align: center;
+    background-color:hotpink;
+    border: none;
+    margin-top: 5px;
+}

@@ -126,11 +126,8 @@ function hideWeek() {
 		5: 'friday',
 	  };
 	const today = dayMap[new Date().getDay()];
-	console.log(document.querySelectorAll('button.week'))
 	Array.from(document.querySelectorAll('button.battle.week'))
 	.forEach(button => {
-		debugger;
-		console.log(button.classList)
 		if (button.classList.contains(today)) {
 		  button.style.display = 'block'; // 또는 'block' 원하면 조정
 		} else {
@@ -139,5 +136,38 @@ function hideWeek() {
 	})
   }
 
-  hideWeek()
-replaceFragment('character-list');
+  const timerMap = {};
+
+  function startTimer(timerId, seconds) {
+    if (timerMap[timerId]) {
+      clearInterval(timerMap[timerId]);
+    }
+
+    let remaining = seconds;
+    document.getElementById(timerId).textContent = `${remaining}초`;
+
+    const intervalId = setInterval(() => {
+      remaining--;
+      if (remaining <= 0) {
+        clearInterval(intervalId);
+        document.getElementById(timerId).textContent = "가능";
+        delete timerMap[timerId];
+      } else {
+        document.getElementById(timerId).textContent = `${remaining}초`;
+      }
+    }, 1000);
+
+    timerMap[timerId] = intervalId;
+  }
+
+  // 모든 버튼에 이벤트 리스너 등록
+  document.querySelectorAll('button[timer]').forEach(button => {
+    button.addEventListener('click', (event) => {
+      const timerId = button.getAttribute('timer');
+      const seconds = parseInt(button.getAttribute('sec'));
+      startTimer(timerId, seconds);
+    });
+  });
+
+hideWeek()
+replaceFragment('character-list')
