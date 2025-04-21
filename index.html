@@ -149,16 +149,14 @@
     <div id="성채타이머" class="timer"></div>
 	</div>
   <div class="flex-item"> 
-    
-	</div>
-
-  <div class="flex-item"> 
     <button class="party" onclick="party_pattern(['해디', 0], ['사제', 0], ['솬서', 0], ['에인', 0], ['잉퀴', 0])">내외중순</button>
-    <button class="chain" timer="내외중순타이머" sec="1800" onclick="clickSelectedBattles(['순찰로','내곽','외곽','중앙구역'], 2)">천공성</button>
+    <button class="chain" timer="내외중순타이머" sec="1800" onclick="clickSelectedBattles(['순찰로','내곽','외곽','중앙구역', '천년노말', '천년하드'], 2)">천공성</button>
     <button class="battle" onclick="battle('모험', 'sion00e', ['해디','사제','솬서','에인','잉퀴'], false)">순찰로</button>
     <button class="battle" onclick="battle('모험', 'sion00', ['해디','사제','솬서','에인','잉퀴'], false)">외곽</button>
     <button class="battle" onclick="battle('모험', 'sion01', ['해디','사제','솬서','에인','잉퀴'], false)">내곽</button>
     <button class="battle" onclick="battle('모험', 'sion02', ['해디','사제','솬서','에인','잉퀴'], false)">중앙구역</button>
+    <button class="battle" onclick="battle('모험', 'festival01', ['해디','사제','솬서','에인','잉퀴'], false)">천년노말</button>
+    <button class="battle" onclick="battle('모험', 'festival011', ['해디','사제','솬서','에인','잉퀴'], false)">천년하드</button>
     <div id="내외중순타이머" class="timer"></div>
   </div>
 </div> <!--container end -->
@@ -199,6 +197,12 @@
     <button class="party" onclick="party_pattern(['소셜', 0], ['사제', 0], ['바드', 0], ['솬서', 0], ['에인', 0])">용낚시</button>
     <button class="battle" timer="용낚시타이머" sec="3600" onclick="battle('모험', 'Fish01', ['소셜','사제','바드','솬서','에인'], false)">용낚시</button>
     <div id="용낚시타이머" class="timer"></div>
+  </div>
+  
+  <div class="flex-item">
+    <button class="party" onclick="party_pattern(['소셜', 0], ['사제', 0], ['솬서', 0], ['스펠마', 0], ['소서', 0])">듀라딘</button>
+    <button class="battle" timer="듀라딘타이머" sec="3600" onclick="battle('모험', 'min096', ['소셜','사제','솬서','스펠마','소서'], false)">듀라딘</button>
+    <div id="듀라딘타이머" class="timer"></div>
   </div>
 </div>  <!--container end -->
 
