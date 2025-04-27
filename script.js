@@ -52,18 +52,33 @@ function reset_pattern() {
 	}
 }
 
-function pattern(formId, patternno){
-	const form = document.getElementById(formId);
-	form.querySelector('input[name="patternno"]').value = patternno;
+function pattern(className, patternno){
+	const form = document.createElement('form');
+	form.method = 'POST'
+	form.target = '_blank'
+	form.action = "http://sic.zerosic.com/ZeroHOF/index.php?char=" + 캐릭[className]
+	
+	const input1 = document.createElement('input');
+	input1.type = 'hidden'
+	input1.name = 'patternno'
+	input1.value = patternno
+	form.appendChild(input1);
+
+	const input2 = document.createElement('input');
+	input2.type = 'hidden';
+	input2.name = 'loadpattern'
+	input2.value = 'LOAD'
+	form.appendChild(input2);
+	
+	document.body.appendChild(form);
 	form.submit();
+	document.body.removeChild(form);
 }
 
 
 function party_pattern(...args) {
   args.forEach(([className, patternName], index) => {
-    setTimeout(() => {
-      pattern(className, patternName);
-    }, index * 1000);
+    setTimeout(() => { pattern(className, patternName)}, index * 1000)
   });
 }
 
