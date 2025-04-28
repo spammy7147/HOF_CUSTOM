@@ -120,12 +120,14 @@
 	</div>
 
   <div class="flex-item"> 
-    <button class="party" onclick="party_pattern(['소셜', 0], ['사제', 0], ['사제2', 0], ['솬서', 0], ['동방', 0])">하드</button>
-    <button class="battle" onclick="battle('모험', 'festival055', ['소셜','사제','사제2','솬서','동방'],false)">모레하드</button>
-    <button class="battle" onclick="battle('모험', 'festival033', ['소셜','사제','사제2','솬서','동방'],false)">혈족하드</button>
-    <button class="battle" onclick="battle('모험', 'festival066', ['소셜','사제','사제2','솬서','동방'],false)">산중하드</button>
+    <button class="party" onclick="party_pattern(['소셜', 0], ['사제', 2], ['사제2', 0], ['바드', 0], ['동방', 0])">모레하드</button>
+    <button class="battle" onclick="battle('모험', 'festival055', ['소셜','사제','사제2','바드','동방'],false)">모레하드</button>
+    <button class="party" onclick="party_pattern(['소셜2', 1], ['사제', 0], ['솬서', 0], ['바드2', 2], ['동방', 0])">혈족하드</button>
+    <button class="battle" onclick="battle('모험', 'festival033', ['소셜2','사제','솬서','바드2','동방'],false)">혈족하드</button>
+    <button class="party" onclick="party_pattern(['소셜', 2], ['사제', 0], ['드루', 1], ['동방', 0], ['빈디', 1])">산중하드</button>
+    <button class="battle" onclick="battle('모험', 'festival066', ['소셜','사제','드루','동방','빈디'],false)">산중하드</button>
 	</div>
-
+  <!-- 산중	소셜, 도루, 비디, 동방 카디 -->
   <div class="flex-item"> 
     <button class="party" onclick="party_pattern(['낫망네크', 0], ['바드2', 4])">낫망</button>
     <button class="chain" onclick="clickSelectedBattles(['낫망','낫망하드'])">낫망연속</button>
@@ -187,7 +189,7 @@
     <div id="2탑타이머" class="timer"></div>
   </div>
     <div class="flex-item">
-    <button class="party" onclick="party_pattern(['사제', 0], ['솬서', 2], ['화악', 0], ['총잡이', 3], ['도둑', 4])">3탑</button>
+    <button class="party" onclick="party_pattern(['사제', 0], ['솬서', 2], ['화악', 1], ['총잡이', 3], ['도둑', 4])">3탑</button>
     <button class="battle" timer="3탑타이머" sec="10800" onclick="battle('모험', 'Rsion05', ['사제','솬서','화악','총잡이','도둑'], false)">3탑</button>
     <button class="battle" timer="3탑타이머" sec="10800" onclick="battle('모험', 'sion05', ['사제','솬서','화악','총잡이','도둑'], false)">3탑</button>
     <div id="3탑타이머" class="timer"></div>
@@ -242,7 +244,7 @@
       <button class="battle" timer="1분타이머" sec="70" onclick="battle('모험', 'festival08', ['동방','사제2','몽크','와쳐','바드2'])">결승</button>
     </div>
     <div class="flex-item">
-      <button class="party" onclick="party_pattern(['소셜2', 4], ['사제', 0], ['바드2', 1], ['솬서', 0], ['소서', 1])">앱솔</button>
+      <button class="party" onclick="party_pattern(['소셜2', 2], ['사제', 0], ['바드2', 1], ['솬서', 0], ['소서', 1])">앱솔</button>
       <button class="battle" timer="1분타이머" sec="70" onclick="battle('모험', 'min11', ['소셜2','사제','바드2','솬서','소서'])">앱솔</button>
     </div>
     <div class="flex-item">
@@ -282,15 +284,13 @@
     </div>
   </div><!--container end -->
 <!-- 
-앨솔	소셜, 소셜2, 바드2
-오숲	사제2, 바드2
-산중	소셜, 도루, 비디, 동방 카디
+
+
 보쉬	바드
 커터스	와쳐, 암흑네크, 화약, 산서
 하인켈	바드
 장서고	소셜, 소셜, 지오, 에인
-듀라딘	소셜2
-혈족	소셜2
+
  -->
 
 <hr>
