@@ -141,7 +141,7 @@ function hideWeek() {
 		5: 'friday',
 	  };
 	const today = dayMap[new Date().getDay()];
-	Array.from(document.querySelectorAll('button.battle.week'))
+	Array.from(document.querySelectorAll('button.week'))
 	.forEach(button => {
 		if (button.classList.contains(today)) {
 		  button.style.display = 'block'; // 또는 'block' 원하면 조정
