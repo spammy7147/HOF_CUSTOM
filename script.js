@@ -1,17 +1,19 @@
-function get_quest(arr, menu = '퀘스트') {
-	
-	let cnt = 0;
+function sleep(ms) {
+	return new Promise(resolve => setTimeout(resolve, ms));
+  }
+
+async function get_quest(arr, menu = '퀘스트') {
 	for(key in arr) {
-		let no = arr[key];
-		setTimeout(() => {quest(no, 'get', menu)}, cnt++ * 1000)
+		quest(arr[key], 'get', menu)
+		await sleep(500)
 	}
 }
 
-function complete_quest(arr, menu = '퀘스트') {
+async function complete_quest(arr, menu = '퀘스트') {
 	let cnt = 0;
 	for(key in arr) {
-		let no = arr[key];
-		setTimeout(() => {quest(no, 'complete',menu)}, cnt++ * 1000)
+		quest(arr[key], 'complete',menu)
+		await sleep(500)
 	}
 }
 function quest(no, status, menu) {
@@ -34,21 +36,21 @@ function quest(no, status, menu) {
 	window.open(link, 'quest');
 }
 
-function clickSelectedBattles(arr, sec=1) {
+async function clickSelectedBattles(arr, sec=1) {
 	const buttons = Array.from(document.querySelectorAll('button.battle'))
 	  .filter(btn => arr.includes(btn.textContent.trim()));
   
 	for(key in buttons) {
-			  let btn = buttons[key];
-		 setTimeout(() => {btn.click()}, key * sec * 1000)		
+			let btn = buttons[key];
+			btn.click()
+			await sleep(sec * 900)
 		  }
   }
 
-function reset_pattern() {
-	let cnt = 0;
+async function reset_pattern() {
 	for(key in 캐릭) {
-		let char = key
-		setTimeout(() => {pattern(char, 0)}, cnt++ * 1000)
+		pattern(key, 0)
+		await sleep(1000)
 	}
 }
 
@@ -76,10 +78,11 @@ function pattern(className, patternno){
 }
 
 
-function party_pattern(...args) {
-  args.forEach(([className, patternName], index) => {
-    setTimeout(() => { pattern(className, patternName)}, index * 1000)
-  });
+async function party_pattern(...args) {
+	for (const [className, patternName] of args) {
+		pattern(className, patternName)
+		await sleep(900)
+	}
 }
 
 function battle(status, action, char, isMulti) { 
@@ -110,13 +113,47 @@ function battle(status, action, char, isMulti) {
 	document.body.removeChild(form);
 }
 
-function 범용모험() {
-	let idx = 0;
-	for(key in 모험) {
-		let action = 모험[key] 
-		setTimeout(() => {battle('모험', action,['소셜','사제','바드','에인','도둑'], false)}, idx++ * 1500)
+
+async function fishing() { 
+	const action = 'http://sic.zerosic.com/ZeroHOF/index.php?menu=fishing'
+	const form1 = document.createElement('form');
+	form1.method = 'POST'
+	form1.target = '_blank'
+	form1.action = action
+	const input = document.createElement('input');
+	input.type = 'hidden'
+	input.name = 'FStart'
+	input.value = '낚시를 시작한다'
+	form1.appendChild(input);
+	document.body.appendChild(form1);
+	
+	const form2 = document.createElement('form');
+	form2.method = 'POST'
+	form2.target = '_blank'
+	form2.action = action
+	const input2 = document.createElement('input');
+	input2.type = 'hidden';
+	input2.name = 'FishingA'
+	input2.value = '낚는다'
+	form2.appendChild(input2);
+	document.body.appendChild(form2);
+
+	for(let i=0;i<16;i++) {
+		form1.submit()
+		await sleep(1000)
+		form2.submit()
+		await sleep(1000)
 	}
 
+	document.body.removeChild(form1);
+	document.body.removeChild(form2);
+}
+
+async function 범용모험() {
+	for(key in 모험) {
+		battle('모험', 모험[key],['소셜','사제','바드','에인','도둑'], false)
+		await sleep(1000)
+	}
 }
 
 async function replaceFragment(htmlName) {
