@@ -43,7 +43,7 @@ async function clickSelectedBattles(arr, sec=1) {
 	for(key in buttons) {
 			let btn = buttons[key];
 			btn.click()
-			await sleep(sec * 900)
+			await sleep(sec * 1000)
 		  }
   }
 
@@ -81,7 +81,7 @@ function pattern(className, patternno){
 async function party_pattern(...args) {
 	for (const [className, patternName] of args) {
 		pattern(className, patternName)
-		await sleep(900)
+		await sleep(1000)
 	}
 }
 
