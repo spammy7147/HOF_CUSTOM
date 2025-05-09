@@ -140,9 +140,9 @@ async function fishing() {
 
 	for(let i=0;i<16;i++) {
 		form1.submit()
-		await sleep(1000)
+		await sleep(500)
 		form2.submit()
-		await sleep(1000)
+		await sleep(500)
 	}
 
 	document.body.removeChild(form1);
