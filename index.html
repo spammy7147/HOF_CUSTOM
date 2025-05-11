@@ -31,6 +31,13 @@
   <hr>
 
   <div class="flex-item">
+    <a href="#" onclick="get_quest(잡퀘)" class="link-item">잡퀘수주</a>
+    <a href="#" onclick="complete_quest(잡퀘)" class="link-item">잡퀘완료</a>
+  </div>
+
+  <hr>
+
+  <div class="flex-item">
     <a href="#" onclick="get_quest(작업장, '작업장')" class="link-item">작업장수주</a>
     <a href="#" onclick="complete_quest(작업장, '작업장')" class="link-item">작업장완료</a>
   </div>
@@ -212,27 +219,31 @@
 
 <div class="flex-container">
   <div class="flex-item">
-    <button class="party" onclick="party_pattern(['소셜', 3], ['사제', 0], ['바드', 0], ['스펠마', 1], ['도둑', 3])">1탑</button>  
-    <button class="battle" timer="1탑타이머" sec="10800" onclick="battle('모험', 'Rsion03', ['소셜','사제','바드','스펠마','도둑'], false)">1탑</button>
-    <button class="battle" timer="1탑타이머" sec="10800" onclick="battle('모험', 'sion03', ['소셜','사제','바드','스펠마','도둑'], false)">1탑</button>
+    <button class="party" onclick="party_pattern(['소셜', 3], ['사제', 0], ['바드', 0], ['스펠마', 1], ['도둑', 3])">1탑</button> 
+    <button class="chain" timer="1탑타이머" sec="10800" onclick="clickSelectedBattles(['1탑이지','1탑하드'], 1)">1탑</button> 
+    <button class="battle" onclick="battle('모험', 'Rsion03', ['소셜','사제','바드','스펠마','도둑'], false)">1탑이지</button>
+    <button class="battle" onclick="battle('모험', 'sion03', ['소셜','사제','바드','스펠마','도둑'], false)">1탑하드</button>
     <div id="1탑타이머" class="timer"></div>
   </div>
   <div class="flex-item">
     <button class="party" onclick="party_pattern(['소셜', 4], ['사제', 0], ['2탑전용', 0], ['스펠마', 1], ['솬서', 0], ['도둑', 3])">2탑</button>
-    <button class="battle" timer="2탑타이머" sec="10800" onclick="battle('모험', 'Rsion04', ['소셜','사제','2탑전용','스펠마','도둑'], false)">2탑</button>
-    <button class="battle" timer="2탑타이머" sec="10800" onclick="battle('모험', 'sion04', ['소셜','사제','2탑전용','스펠마','솬서'], false)">2탑</button>
+    <button class="chain" timer="2탑타이머" sec="10800" onclick="clickSelectedBattles(['2탑이지','2탑하드'], 1)">2탑</button> 
+    <button class="battle" onclick="battle('모험', 'Rsion04', ['소셜','사제','2탑전용','스펠마','도둑'], false)">2탑이지</button>
+    <button class="battle" onclick="battle('모험', 'sion04', ['소셜','사제','2탑전용','스펠마','솬서'], false)">2탑하드</button>
     <div id="2탑타이머" class="timer"></div>
   </div>
     <div class="flex-item">
     <button class="party" onclick="party_pattern(['사제', 0], ['솬서', 2], ['화악', 1], ['총잡이', 3], ['도둑', 4])">3탑</button>
-    <button class="battle" timer="3탑타이머" sec="10800" onclick="battle('모험', 'Rsion05', ['사제','솬서','화악','총잡이','도둑'], false)">3탑</button>
-    <button class="battle" timer="3탑타이머" sec="10800" onclick="battle('모험', 'sion05', ['사제','솬서','화악','총잡이','도둑'], false)">3탑</button>
+    <button class="chain" timer="3탑타이머" sec="10800" onclick="clickSelectedBattles(['3탑이지','3탑하드'], 1)">3탑</button>
+    <button class="battle" onclick="battle('모험', 'Rsion05', ['사제','솬서','화악','총잡이','도둑'], false)">3탑이지</button>
+    <button class="battle" onclick="battle('모험', 'sion05', ['사제','솬서','화악','총잡이','도둑'], false)">3탑하드</button>
     <div id="3탑타이머" class="timer"></div>
   </div>
   <div class="flex-item">
     <button class="party" onclick="party_pattern(['사제', 1], ['바드', 1], ['스펠마', 2], ['잉퀴', 1], ['솬서', 3])">4탑</button>
-    <button class="battle" timer="4탑타이머" sec="10800" onclick="battle('모험', 'Rsion06', ['사제','바드','스펠마','잉퀴','솬서'], false)">4탑</button>
-    <button class="battle" timer="4탑타이머" sec="10800" onclick="battle('모험', 'sion06', ['사제','바드','스펠마','잉퀴','솬서'], false)">4탑</button>
+    <button class="chain" timer="4탑타이머" sec="10800" onclick="clickSelectedBattles(['4탑이지','4탑하드'], 1)">4탑</button>
+    <button class="battle" onclick="battle('모험', 'Rsion06', ['사제','바드','스펠마','잉퀴','솬서'], false)">4탑이지</button>
+    <button class="battle" onclick="battle('모험', 'sion06', ['사제','바드','스펠마','잉퀴','솬서'], false)">4탑하드</button>
     <div id="4탑타이머" class="timer"></div>
   </div>
   <div class="flex-item">
@@ -325,18 +336,9 @@
     <div class="flex-item">
       <button class="party" onclick="party_pattern(['소셜', 0], ['사제', 0], ['바드', 7], ['동방', 0], ['템사에인', 0])">대회랑</button>
       <button class="battle" timer="5분타이머" sec="350" onclick="battle('모험', 'Conc006', ['소셜','사제','바드','동방','템사에인'])">대회랑</button>
-    </div>암흑네크
+    </div>
 
   </div><!--container end -->
-<!-- 
-
-
-보쉬	바드
-커터스	와쳐, 암흑네크, 화약, 산서
-하인켈	바드
-장서고	소셜, 소셜, 지오, 에인
-
- -->
 
 <hr>
 
