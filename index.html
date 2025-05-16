@@ -115,6 +115,16 @@
     <button class="battle week thursday" onclick="battle('모험', 'DAY1004R', ['소셜','사제','바드','데헌','템사에인'], false)">목이지</button>
     <button class="battle week thursday" onclick="battle('모험', 'DAY1004', ['소셜','사제','바드','데헌','템사에인'], false)">목하드</button>
   </div>
+  <div class="flex-item"> 
+    <button class="party week friday" onclick="party_pattern(['소셜', 5], ['사제', 0], ['바드', 5], ['데헌', 1], ['템사에인', 0])">금요</button>
+    <button class="battle week friday" onclick="battle('모험', 'DAY1005R', ['소셜','사제','바드','데헌','템사에인'], false)">금이지</button>
+    <button class="battle week friday" onclick="battle('모험', 'DAY1005', ['소셜','사제','바드','데헌','템사에인'], false)">금하드</button>
+  </div>
+  <div class="flex-item"> 
+    <button class="party week weekend" onclick="party_pattern(['소셜', 7], ['사제', 7], ['바드', 0], ['잉퀴', 3], ['에인', 7])">토요</button>
+    <button class="battle week weekend" onclick="battle('모험', 'DAY1006R', ['소셜','사제','바드','잉퀴','에인'], false)">토이지</button>
+    <button class="battle week weekend" onclick="battle('모험', 'DAY1006', ['소셜','사제','바드','잉퀴','에인'], false)">토하드</button>
+  </div>
 
 </div>
 
@@ -318,7 +328,7 @@
       <button class="battle" timer="5분타이머" sec="350" onclick="battle('모험', 'Conc001', ['골용비테', '사제2','지오','드루','에인'])">열기가</button>
     </div>
     <div class="flex-item">
-      <button class="party" onclick="party_pattern(['골용비테', 0], ['사제', 0], ['수학자', 2], ['드루', 3], ['에인', 0])">차갑게</button>
+      <button class="party" onclick="party_pattern(['골용비테', 0], ['사제', 0], ['수학자', 2], ['드루', 0], ['에인', 0])">차갑게</button>
       <button class="battle" timer="5분타이머" sec="350" onclick="battle('모험', 'Conc002', ['골용비테','사제','수학자','드루','에인'])">차갑게</button>
     </div>
     <div class="flex-item">
