@@ -63,8 +63,20 @@
     <button class="party" onclick="party_pattern(['소셜', 0], ['사제', 0], ['도둑', 0], ['드루', 0], ['바드', 0], ['잉퀴', 0], ['에인', 0], ['총잡이', 0], ['동방', 0])">범용</button>
     <button onclick="범용모험();">전투</button>
     <button class="battle" onclick="battle('전투', 'snow22', ['소셜','사제','도둑','드루','바드'], true)">발자키</button>
-
   </div>
+
+  <div class="flex-item"> 
+    <button class="party" onclick="party_pattern(['해디', 0], ['사제', 0], ['바드', 0], ['수학자', 0], ['에인', 0])">내외중순</button>
+    <button class="chain" timer="내외중순타이머" sec="1800" onclick="clickSelectedBattles(['순찰로','내곽','외곽','중앙구역', '천년노말', '천년하드'], 2)">천공성</button>
+    <button class="battle" onclick="battle('모험', 'sion00e', ['해디','사제','바드','수학자','에인'], false)">순찰로</button>
+    <button class="battle" onclick="battle('모험', 'sion00', ['해디','사제','바드','수학자','에인'], false)">외곽</button>
+    <button class="battle" onclick="battle('모험', 'sion01', ['해디','사제','바드','수학자','에인'], false)">내곽</button>
+    <button class="battle" onclick="battle('모험', 'sion02', ['해디','사제','바드','수학자','에인'], false)">중앙구역</button>
+    <button class="battle" onclick="battle('모험', 'festival01', ['해디','사제','바드','수학자','에인'], false)">천년노말</button>
+    <button class="battle" onclick="battle('모험', 'festival011', ['해디','사제','바드','수학자','에인'], false)">천년하드</button>
+    <div id="내외중순타이머" class="timer"></div>
+  </div>
+
   <div class="flex-item"> 
     <button class="party" onclick="party_pattern(['소셜', 0], ['사제', 0], ['드루', 0], ['동방', 0], ['잉퀴', 0])">GS</button>
     <button class="chain" onclick="clickSelectedBattles(['숭배','고행','전도','화랑'], 7)">GS</button>
@@ -212,17 +224,7 @@
 
 
 	</div>
-  <div class="flex-item"> 
-    <button class="party" onclick="party_pattern(['해디', 0], ['사제', 0], ['바드', 0], ['수학자', 0], ['에인', 0])">내외중순</button>
-    <button class="chain" timer="내외중순타이머" sec="1800" onclick="clickSelectedBattles(['순찰로','내곽','외곽','중앙구역', '천년노말', '천년하드'], 2)">천공성</button>
-    <button class="battle" onclick="battle('모험', 'sion00e', ['해디','사제','바드','수학자','에인'], false)">순찰로</button>
-    <button class="battle" onclick="battle('모험', 'sion00', ['해디','사제','바드','수학자','에인'], false)">외곽</button>
-    <button class="battle" onclick="battle('모험', 'sion01', ['해디','사제','바드','수학자','에인'], false)">내곽</button>
-    <button class="battle" onclick="battle('모험', 'sion02', ['해디','사제','바드','수학자','에인'], false)">중앙구역</button>
-    <button class="battle" onclick="battle('모험', 'festival01', ['해디','사제','바드','수학자','에인'], false)">천년노말</button>
-    <button class="battle" onclick="battle('모험', 'festival011', ['해디','사제','바드','수학자','에인'], false)">천년하드</button>
-    <div id="내외중순타이머" class="timer"></div>
-  </div>
+
 </div> <!--container end -->
 
 <hr>
