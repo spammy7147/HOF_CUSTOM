@@ -165,8 +165,8 @@
     <button class="battle" onclick="battle('전투', 'snow23', ['소셜2','사제','바드2','드루','총잡이'], false)">발자</button>
     <button class="party" onclick="party_pattern(['소셜', 0], ['사제', 0], ['바드', 0],['에인', 0],['잉퀴', 0])">로호트</button>
     <button class="battle" onclick="battle('모험', 'Noble033', ['소셜','사제','바드','에인','잉퀴'],false)">로호트</button>
-    <button class="party" onclick="party_pattern(['소셜', 0], ['사제', 0], ['와쳐', 0],['셀레', 0],['동방', 0])">기원</button>
-    <button class="battle" onclick="battle('모험', 'GS06', ['소셜','사제','와쳐','셀레','동방'],false)">기원</button>
+    <button class="party" onclick="party_pattern(['소셜', 0], ['사제', 0], ['와쳐', 0],['스티그마셔틀', 0],['동방', 0])">기원</button>
+    <button class="battle" onclick="battle('모험', 'GS06', ['소셜','사제','와쳐','스티그마셔틀','동방'],false)">기원</button>
     <button class="party" onclick="party_pattern(['소셜', 0], ['사제', 0], ['바드', 0],['스펠마', 0],['소서', 0])">툴스</button>
     <button class="battle" onclick="battle('모험', 'min08', ['소셜','사제','바드','스펠마','소서'],false)">툴스</button>
     <button class="battle" onclick="battle('모험', 'min10', ['소셜','사제','바드','스펠마','소서'],false)">타는세계</button>
@@ -271,8 +271,13 @@
   
 
   <div class="flex-item">
-    <button class="party" onclick="party_pattern(['드루', 2], ['사제', 4], ['지오', 0], ['암흑네크', 1], ['에인', 4])">오숲</button>
+    <button class="party" onclick="party_pattern(['드루', 0], ['사제', 4], ['지오', 0], ['암흑네크', 1], ['에인', 4])">오숲</button>
       <button class="battle" timer="오숲타이머" sec="3600" onclick="battle('모험', 'for099', ['드루','사제','지오','암흑네크','에인'], false)">오숲</button>
+    <div id="	오숲타이머" class="timer"></div>
+  </div>
+  <div class="flex-item">
+    <button class="party" onclick="party_pattern(['드루', 0], ['사제', 4], ['바드', 4], ['암흑네크', 1], ['총잡이', 4])">오숲</button>
+      <button class="battle" timer="오숲타이머" sec="3600" onclick="battle('모험', 'for099', ['드루','사제','바드','암흑네크','총잡이'], false)">오숲</button>
     <div id="	오숲타이머" class="timer"></div>
   </div>
 </div>  <!--container end -->
