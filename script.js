@@ -88,8 +88,10 @@ async function party_pattern(...args) {
 function battle(status, action, char, isMulti) { 
 	if(status === '모험') {
 		action = 'http://sic.zerosic.com/ZeroHOF/index.php?sp_common=' + action
-	}else {
+	}else if(status === '전투'){
 		action = 'http://sic.zerosic.com/ZeroHOF/index.php?common=' + action
+	}else if(status === '레이드') {
+		action = 'http://sic.zerosic.com/ZeroHOF/index.php?raid_common=' + action
 	}
 	
 	const form = document.createElement('form');
@@ -220,6 +222,22 @@ function hideWeek() {
       startTimer(timerId, seconds);
     });
   });
+
+  async function raid(value) {
+	
+	const action = 'http://sic.zerosic.com/ZeroHOF/index.php?menu=raidpub'
+	const form1 = document.createElement('form');
+	form1.method = 'POST'
+	form1.target = '_blank'
+	form1.action = action
+	const input = document.createElement('input');
+	input.type = 'hidden'
+	input.name = 레이드[value]
+	input.value = '1'
+	form1.appendChild(input);
+	document.body.appendChild(form1);
+	form1.submit()
+  }
 
 hideWeek()
 replaceFragment('character-list')

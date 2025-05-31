@@ -54,8 +54,22 @@
 <div id="character-list"></div>
 
 <hr>
-
-<button onclick="fishing()">낚시</button>
+<div class="flex-container">
+  <div class="flex-item">
+    <button onclick="fishing()">낚시</button>
+  </div>
+  <div class="flex-item">
+    <button onclick="raid('갱신')">갱신</button>
+    <button onclick="raid('보상확인')">보상확인</button>
+    <button onclick="raid('리셋')">리셋</button>
+    <button onclick="raid('마차등록')">마차등록</button>
+    <button onclick="raid('마차시작')">마차시작</button>
+    <button onclick="raid('세이렌등록')">바다등록</button>
+    <button onclick="raid('세이렌시작')">바다시작</button>
+    <button class="party" onclick="party_pattern(['소셜', 0], ['사제', 0], ['도둑', 0], ['드루', 0], ['바드', 0])">범용</button>
+    <button class="battle" onclick="battle('레이드', 'raid001', ['소셜','사제','드루','스펠마','에인'], false)">마차</button>
+  </div>
+</div>
 
 <hr>
 <div class="flex-container">
@@ -90,6 +104,11 @@
     <button class="battle" onclick="battle('전투', 'Noble102', ['소셜','사제','바드','에인','동방'],true)">동관</button>
     <button class="party" onclick="party_pattern(['카발', 2], ['사제2', 3], ['낫망네크', 3])">키퀘</button>
     <button class="battle" onclick="battle('전투', 'Noble201', ['카발','사제2','낫망네크'],true)">키퀘</button> 
+  </div>
+    <div class="flex-item">
+    <button class="party" onclick="party_pattern(['소셜2', 4], ['사제2', 1], ['바드2', 5], ['지오', 4], ['칠터치네크', 1])">서관</button>
+    <button class="battle" onclick="battle('전투', 'Noble202', ['소셜2','사제2','바드2','지오','칠터치네크'],true)">조그라</button>
+    <button class="battle" onclick="battle('전투', 'Noble204', ['소셜2','사제2','바드2','지오','칠터치네크'],true)">에올</button>
   </div>
   <div class="flex-item">
     <button class="party" onclick="party_pattern(['사제', 0], ['바드', 0], ['드루', 0], ['솬서', 0], ['닌자', 0])">해달</button>
@@ -258,8 +277,8 @@
     <div id="4탑타이머" class="timer"></div>
   </div>
   <div class="flex-item">
-    <button class="party" onclick="party_pattern(['사제2', 4], ['지오', 3], ['스펠마', 4], ['해디', 1], ['칠터치네크', 2])">문어</button>
-    <button class="battle" timer="문어타이머" sec="10800" onclick="battle('모험', 'Fish01ex', ['사제2','지오','스펠마','해디','칠터치네크'], false)">문어</button>
+    <button class="party" onclick="party_pattern(['사제', 7], ['지오', 2], ['스펠마', 4], ['해디', 1], ['칠터치네크', 2])">문어</button>
+    <button class="battle" timer="문어타이머" sec="10800" onclick="battle('모험', 'Fish01ex', ['사제','지오','스펠마','해디','칠터치네크'], false)">문어</button>
     <div id="문어타이머" class="timer"></div>
   </div>
   <div class="flex-item">
