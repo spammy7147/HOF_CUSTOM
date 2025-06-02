@@ -1,3 +1,7 @@
+const 일밀리 = 100
+const 오밀리 = 500
+const 일초 = 1000
+
 function sleep(ms) {
 	return new Promise(resolve => setTimeout(resolve, ms));
   }
@@ -5,7 +9,7 @@ function sleep(ms) {
 async function get_quest(arr, menu = '퀘스트') {
 	for(key in arr) {
 		quest(arr[key], 'get', menu)
-		await sleep(500)
+		await sleep(오밀리)
 	}
 }
 
@@ -13,7 +17,7 @@ async function complete_quest(arr, menu = '퀘스트') {
 	let cnt = 0;
 	for(key in arr) {
 		quest(arr[key], 'complete',menu)
-		await sleep(500)
+		await sleep(오밀리)
 	}
 }
 function quest(no, status, menu) {
@@ -43,14 +47,14 @@ async function clickSelectedBattles(arr, sec=1) {
 	for(key in buttons) {
 			let btn = buttons[key];
 			btn.click()
-			await sleep(sec * 1000)
+			await sleep(sec * 일초)
 		  }
   }
 
 async function reset_pattern() {
 	for(key in 캐릭) {
 		pattern(key, 0)
-		await sleep(1000)
+		await sleep(일초)
 	}
 }
 
@@ -81,7 +85,7 @@ function pattern(className, patternno){
 async function party_pattern(...args) {
 	for (const [className, patternName] of args) {
 		pattern(className, patternName)
-		await sleep(1000)
+		await sleep(일초)
 	}
 }
 
@@ -142,9 +146,9 @@ async function fishing() {
 
 	for(let i=0;i<16;i++) {
 		form1.submit()
-		await sleep(500)
+		await sleep(오밀리)
 		form2.submit()
-		await sleep(500)
+		await sleep(오밀리)
 	}
 
 	document.body.removeChild(form1);
