@@ -144,7 +144,7 @@ async function fishing() {
 	form2.appendChild(input2);
 	document.body.appendChild(form2);
 
-	for(let i=0;i<16;i++) {
+	for(let i=0;i<19;i++) {
 		form1.submit()
 		await sleep(오밀리)
 		form2.submit()
